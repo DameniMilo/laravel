@@ -12,7 +12,7 @@
             @yield("content")
         </div>
 
-        <script src="{{ asset('public/js/vendor/bootstrap3/bootstrap.js') }}" type="text/javascript"/>
-        <script src="{{ asset('public/js/app.js') }}" type="text/javascript"/>
+        <script src="{{ asset('public/js/app.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('public/js/vendor/bootstrap3/bootstrap.js') }}" type="text/javascript"></script>
     </body>
 </html>

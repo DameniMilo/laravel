@@ -12,5 +12,5 @@
 	</div>
 </div>
 
-<script src="{{ asset('js/vendor/ckeditor/ckeditor.js') }}" type="text/javascript"/>
+<script src="{{ asset('js/vendor/ckeditor/ckeditor.js') }}" type="text/javascript"></script>
 @endsection

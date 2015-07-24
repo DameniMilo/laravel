@@ -43,9 +43,9 @@
 
 	</style>
 	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-<script src="../assets/js/html5shiv.js"></script>
-<![endif]-->
+	<!--[if lt IE 9]>
+		<script src="{{ asset('js/vendor/html5shiv.min.js') }}" type="text/javascript"></script>
+	<![endif]-->
 </head>
 
 <body>
@@ -61,7 +61,7 @@
 			<button class="btn btn-large btn-primary" type="submit">Sign in</button>
 		</form>
 	</div>
-	<script src="{{ asset('js/vendor/bootstrap2/bootstrap.js') }}" type="text/javascript"/>
-	<script src="{{ asset('js/app.js') }}" type="text/javascript"/>
+	<script src="{{ asset('js/app.js') }}" type="text/javascript"></script>
+	<script src="{{ asset('js/vendor/bootstrap2/bootstrap.js') }}" type="text/javascript"></script>
 </body>
 </html>
