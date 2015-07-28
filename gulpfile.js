@@ -4,8 +4,10 @@ var paths = {
 	'jquery': 'node_modules/jquery/dist/jquery.js',
 	'moment': 'node_modules/moment/min/moment-with-locales.js',
 	'bootbox': 'node_modules/bootbox/bootbox.js',
-	'bootstrap': 'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js'
-}
+	'bootstrap': 'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
+    'underscore': 'node_modules/underscore/underscore.js',
+    'backbone': 'node_modules/backbone/backbone.js'
+};
 
 /*
  |--------------------------------------------------------------------------
@@ -23,7 +25,9 @@ elixir(function(mix) {
     mix.scripts([
 	    paths.jquery,
 	    paths.moment,
-	    paths.bootbox
+	    paths.bootbox,
+        paths.underscore,
+        paths.backbone
 	    //paths.bootstrap
 	], 'public/js/app.js', './');
 });
