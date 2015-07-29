@@ -2,8 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Bootstrap 2</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bootstrap 2</title>
         <meta name="description" content="">
         <meta name="author" content="">
 
@@ -11,8 +11,15 @@
         <link href="{{ asset('css/vendor/bootstrap2/bootstrap.css') }}" rel="stylesheet">
         <link href="{{ asset('css/vendor/bootstrap2/bootstrap-responsive.css') }}" rel="stylesheet">
         <style>
-            body {
-                padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+            @media (min-width : 979px) {
+                body {
+                    padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+                }
+            }
+            @media (max-width : 979px) {
+                body {
+                    padding-top: 0px; /* 60px to make the container go all the way to the bottom of the topbar */
+                }
             }
         </style>
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->

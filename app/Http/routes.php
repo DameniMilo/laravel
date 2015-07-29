@@ -21,7 +21,7 @@ Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('template-selector');
 });
 
 Route::get('hello', function () {
@@ -32,7 +32,21 @@ Route::get('ckeditor', function () {
     return view('ckeditor');
 });
 
-Route::group(['prefix' => 'bootstrap2'], function () {
+Route::group(['prefix' => 'bootstrap2', 'controller' => 'Bootstrap2Controller'], function () {
+    Route::get('/', function() {
+        return view('default-bootstrap2');
+    });
+
+    Route::get('/ckeditor', function () {
+        return view('ckeditor');
+    });
+});
+
+Route::group(['prefix' => 'bootstrap3', 'controller' => 'Bootstrap3Controller'], function () {
+    Route::get('/', function() {
+        return view('default-bootstrap3');
+    });
+
     Route::get('/ckeditor', function () {
         return view('ckeditor');
     });
