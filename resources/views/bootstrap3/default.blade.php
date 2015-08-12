@@ -29,7 +29,7 @@
         <!--<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>-->
     </head>
     <body>
-        @include('fragment/bootstrap3/menu')
+        @include('bootstrap3.partial.menu')
         <div class="container">
             <div class="starter-template">
                 <h1>Bootstrap starter template</h1>

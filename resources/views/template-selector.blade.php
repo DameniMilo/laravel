@@ -27,13 +27,26 @@
         </style>
     </head>
     <body>
-        <iframe width="50%" height="100%" marginheight="0" marginwidth="0" frameborder="0"
-                src="{{ url('/bootstrap2') }}">
+        <h1>Choose Bootstrap template version you wanna use</h1>
+        <ul>
+            <li>
+                <a class="btn btn-primary" href="{{ url('/bootstrap2') }}">
+                    Bootstrap 2.3.2
+                </a>
+            </li>
+            <li>
+                <a class="btn btn-primary" href="{{ url('/bootstrap3') }}">
+                    Bootstrap 3.x
+                </a>
+            </li>
+        </ul>
+        {{--<iframe width="50%" height="100%" marginheight="0" marginwidth="0" frameborder="0"--}}
+                {{--src="{{ url('/bootstrap2') }}">--}}
 
-        </iframe>
-        <iframe width="50%" height="100%" style="float: right;left: 50%;" marginheight="0" marginwidth="0" frameborder="0"
-                src="{{ url('/bootstrap3') }}">
+        {{--</iframe>--}}
+        {{--<iframe width="50%" height="100%" style="float: right;left: 50%;" marginheight="0" marginwidth="0" frameborder="0"--}}
+                {{--src="{{ url('/bootstrap3') }}">--}}
 
-        </iframe>
+        {{--</iframe>--}}
     </body>
 </html>

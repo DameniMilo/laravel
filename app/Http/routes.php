@@ -24,36 +24,34 @@ Route::get('/', function () {
     return view('template-selector');
 });
 
-Route::get('hello', function () {
-    return 'Hello World!';
-});
-
-Route::get('ckeditor', function () {
-    return view('ckeditor');
-});
-
-Route::group(['prefix' => 'bootstrap2', 'controller' => 'Bootstrap2Controller'], function () {
+Route::group(['prefix' => 'bootstrap2'], function () {
     Route::get('/', function() {
-        return view('default-bootstrap2');
+        return view('bootstrap2.default');
     });
 
     Route::get('/ckeditor', function () {
-        return view('ckeditor');
+        return view('bootstrap2.partial.ckeditor');
+    });
+
+    Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
+        Route::get('/dashboard', function () {
+            return 'Dashboard';
+        });
     });
 });
 
-Route::group(['prefix' => 'bootstrap3', 'controller' => 'Bootstrap3Controller'], function () {
+Route::group(['prefix' => 'bootstrap3'], function () {
     Route::get('/', function() {
-        return view('default-bootstrap3');
+        return view('bootstrap3.default');
     });
 
     Route::get('/ckeditor', function () {
-        return view('ckeditor');
+        return view('bootstrap3.partial.ckeditor');
     });
-});
 
-Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
-    Route::get('/dashboard', function () {
-        return 'Dashboard';
+    Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
+        Route::get('/dashboard', function () {
+            return 'Dashboard';
+        });
     });
 });

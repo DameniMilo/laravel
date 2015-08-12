@@ -28,7 +28,7 @@
         <![endif]-->
     </head>
     <body>
-        @include('fragment/bootstrap2/menu')
+        @include('bootstrap2.partial.menu')
         <div class="container-fluid">
             <h1>Bootstrap starter template</h1>
             <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>
@@ -37,5 +37,6 @@
 
         <script src="{{ asset('js/app.js') }}" type="text/javascript"></script>
         <script src="{{ asset('js/vendor/bootstrap2/bootstrap.js') }}" type="text/javascript"></script>
+        @yield("script")
     </body>
 </html>

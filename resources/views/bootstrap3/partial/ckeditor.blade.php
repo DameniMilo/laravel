@@ -1,4 +1,4 @@
-@extends("default-bootstrap2")
+@extends("bootstrap2.default")
 
 @section("title", "CKeditor")
 
