@@ -6,7 +6,7 @@
         <title>Bootstrap 2</title>
         <meta name="description" content="">
         <meta name="author" content="">
-
+        <meta name="_token" content="{!! csrf_token() !!}"/>
         <link href="//fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
         <link href="{{ asset('css/vendor/bootstrap2/bootstrap.css') }}" rel="stylesheet">
         <link href="{{ asset('css/vendor/bootstrap2/bootstrap-responsive.css') }}" rel="stylesheet">
@@ -37,6 +37,11 @@
 
         <script src="{{ asset('js/app.js') }}" type="text/javascript"></script>
         <script src="{{ asset('js/vendor/bootstrap2/bootstrap.js') }}" type="text/javascript"></script>
+        <script type="text/javascript">
+            $.ajaxSetup({
+                headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
+            });
+        </script>
         @yield("script")
     </body>
 </html>

@@ -7,6 +7,9 @@ CKEDITOR.editorConfig = function( config ) {
 	// Define changes to default configuration here. For example:
 	// config.language = 'fr';
 	// config.uiColor = '#AADC6E';
-    //config.extraPlugins='widget,lineutils';
+    config.extraPlugins='widget,lineutils,image2,imageresponsive';
     //config.toolbar=[];
+    //config.allowedContent = true;
+    //config.protectedSource.push(/<jahia:resource[\s\S\t\r\n]*?\/jahia:resource>/);
+    //config.extraAllowedContent='jahia:resource(*)[*]{*}';
 };

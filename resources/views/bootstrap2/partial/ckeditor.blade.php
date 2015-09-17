@@ -4,17 +4,29 @@
 
 @section("content")
 <div class="row-fluid">
-	<div class="span12">
-		<div class="alert alert-info">
-			<h3>TEST</h3>
-			<p>BLABLABLABLA</p>
-		</div>
+	<div class="span6">
+		<form action="{{ url('/bootstrap2/ckeditor') }}" method="POST">
+			{!! csrf_field() !!}
+			<div class="control-group">
+				<div class="controls">
+					<textarea id="ckeditor" name="ckeditor"></textarea>
+				</div>
+			</div>
+			<div class="control-group">
+				<div class="controls">
+					<button type="submit" class="btn btn-primary pull-right" onclick="submitCKEditor()">
+						Submit
+					</button>
+				</div>
+			</div>
+		</form>
 	</div>
-</div>
-
-<div class="row-fluid">
-	<div class="span12">
-		<textarea id="ckeditor" name="ckeditor">BLABLABLA</textarea>
+	<div class="span6">
+		<div id="ckeditorResult">
+			@if (session('ckeditorContent'))
+				{!! session('ckeditorContent') !!}
+			@endif
+		</div>
 	</div>
 </div>
 @endsection
@@ -26,5 +38,12 @@
 		$(document).ready(function() {
 
 		});
+
+		function submitCKEditor() {
+			var data = CKEDITOR.instances.ckeditor.getData();
+			$.post('{{ url('/bootstrap2/ckeditor') }}', { content: data }, function () {
+				window.location.reload()
+			});
+		}
 	</script>
 @endsection

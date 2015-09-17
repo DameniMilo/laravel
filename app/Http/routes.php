@@ -33,6 +33,14 @@ Route::group(['prefix' => 'bootstrap2'], function () {
         return view('bootstrap2.partial.ckeditor');
     });
 
+    Route::post('/ckeditor', function () {
+        if (Request::ajax()) {
+            return response()->json(['ckeditorContent' => Request::get('content')]);
+        } else {
+            return redirect('/bootstrap2/ckeditor')->with('ckeditorContent', Request::get('ckeditor'));
+        }
+    });
+
     Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
         Route::get('/dashboard', function () {
             return 'Dashboard';
